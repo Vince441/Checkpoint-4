@@ -16,19 +16,14 @@ function Home() {
       pseudo: inputPseudo,
       password: inputPassword,
     };
-    const user = JSON.parse(localStorage.getItem("token"));
+
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/login`,
         userLogin,
-        {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        }
+
       );
       setUserConnected(res.data);
-      setUserConnected(res.data.user);
       const userLocal = {
         ...res.data.user,
         token: res.data.token,

@@ -16,7 +16,12 @@ export default function ProfilUser() {
 
   const navigate = useNavigate();
 
+  const removeToken = () => {
+    localStorage.removeItem("token");
+  };
+
   const handlelogout = () => {
+    removeToken();
     setUserConnected(null);
     navigate("/");
   };
@@ -69,12 +74,20 @@ export default function ProfilUser() {
               >
                 Déconnexion
               </button>
-              <h2>Pseudo</h2>
-              <p>{userConnected.pseudo}</p>
-              <h2>Email</h2>
-              <p>{userConnected.email}</p>
-              <h2>Description</h2>
-              <p>{userConnected.description}</p>
+              <div className="ProfilUser__header__information">
+                <div className="Flex__info">
+                  <h2>Pseudo</h2>
+                  <p>{userConnected.pseudo}</p>
+                </div>
+                <div className="Flex__info">
+                  <h2>Email</h2>
+                
+                <p>{userConnected.email}</p></div>
+                <div className="Flex__info">
+                  <h2>Description</h2>
+                  <p>{userConnected.description}</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="ProfilUser__header_2">

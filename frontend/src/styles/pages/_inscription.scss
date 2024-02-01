@@ -75,9 +75,173 @@
 }}
 
 
-
-
- 
-
+@media screen and (max-width: 1503px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 30%;
+                }
+            }
+        }
+    }
   
-    
+}}
+
+
+@media screen and (max-width: 1213px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 35%;
+                }
+            }
+        }
+    }
+  
+}}
+
+
+@media screen and (max-width: 1017px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 40%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 877px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 45%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 769px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 50%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 685px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 60%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 563px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 70%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 478px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 80%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 419px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                  justify-content: center;
+                    width: 80%;
+                    height: 450px;
+                    label{
+                      font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 381px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                  justify-content: center;
+                    width: 90%;
+                    height: 450px;
+                    label{
+                      font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 320px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                  justify-content: center;
+                    width: 90%;
+                    height: 450px;
+                    label{
+                      font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}}

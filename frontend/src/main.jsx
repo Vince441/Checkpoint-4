@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
 import Inscription from "./pages/Inscription";
-import PageDino, { loadDino } from "./pages/PageDino";
+import PageDino from "./pages/PageDino";
 import PageDinoDetails, { loadDinoDetails } from "./pages/PageDinoDetails";
 import ProfilUser from "./pages/ProfilUser";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             <PageDino />
           </ProtectedRoute>
         ),
-        loader: loadDino,
+        // loader: loadDino,
       },
       {
         path: "PageDinoDetails/:id",

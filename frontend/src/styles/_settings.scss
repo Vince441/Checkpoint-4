@@ -27,3 +27,10 @@ a {
   text-decoration: none;
   color: white;
 }
+
+@media screen and (max-width: 728px) {
+html, body, :root {
+  overflow-y: auto;
+}
+
+}

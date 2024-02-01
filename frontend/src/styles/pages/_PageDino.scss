@@ -16,64 +16,308 @@
 }
 
 .container-cards {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 10px;
-    max-height: 85vh;
-    overflow-y: auto;
-    
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px 70px 10px;
+  gap: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
 
-    .dino-cards {
-      margin: 0 auto;
-      width: 45%;
-      border-radius: 10px;
+  .dino-cards {
+    margin: 0 auto;
+    width: 45%;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    border: 1px solid #faa759be;
+    background-color: #272b33be;
+    display: flex;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      cursor: pointer;
+    }
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.1em;
+      color: #ea6d54;
+    }
+    p {
+      line-height: 40px;
+      font-size: 1.8rem;
+      font-family: "Titillium Web", sans-serif;
+    }
+    span {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      color: #faa759;
+    }
+    .texte-cards {
       padding: 15px;
       color: white;
-      border: 1px solid #faa759be;
-      background-color: #272b33be;
-      display: flex;
+    }
+    img {
+      width: 40%;
+      border-radius: 5px;
+    }
+  }
+}
 
-      a {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        cursor: pointer;
+.container-cards::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+}
+
+.container-cards::-webkit-scrollbar-thumb {
+  background-color: #faa75988; /* Couleur de la poignée de la barre de défilement */
+  border-radius: 3px; /* Coins arrondis de la poignée */
+}
+
+@media screen and (max-width: 1440px) {
+  .container-cards {
+    width: 100%;
+    max-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+
+    .dino-cards {
+      width: 49%;
+
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 898px) {
+  .filter {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .search_input {
+      width: 50%;
+      border-radius: 80px;
+      padding: 10px;
+      background-color: #272b33be;
+      border: 1px solid #faa759be;
+      color: white;
+    }
+  }
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    .dino-cards {
+      width: 49%;
+      margin: 0;
+      padding: 10px;
+      a{
+        gap: 20px;
       }
-      h1 {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 30px;
-        letter-spacing: 0.1em;
-        color: #ea6d54;
+      h1{
+        font-size: 2.5rem;
       }
-      p {
-        line-height: 40px;
-        font-size: 18px;
-        font-family: "Titillium Web", sans-serif;
+      p{
+        font-size: 1.5rem;
       }
-      span {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 20px;
-        color: #faa759;
-      }
-      .texte-cards {
-        padding: 15px;
-        color: white;
-      }
-      img {
-        width: 40%;
-        border-radius: 5px;
+      span{
+        font-size: 1.8rem;
       }
     }
   }
+}
 
-  .container-cards::-webkit-scrollbar {
-    width: 8px; /* Largeur de la barre de défilement */
+@media screen and (max-width: 768px) {
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    gap: 50px;
+    .dino-cards {
+      width: 90%;
+      margin: 0;
+      padding: 10px;
+     
+      a{
+        gap: 50px;
+      }
+      h1{
+        font-size: 3rem;
+      }
+      p{
+        font-size: 1.8rem;
+      }
+      span{
+        font-size: 2rem;
+      }
+    }
   }
-  
-  .container-cards::-webkit-scrollbar-thumb {
-    background-color: #faa75988; /* Couleur de la poignée de la barre de défilement */
-    border-radius: 3px; /* Coins arrondis de la poignée */
+}
+
+@media screen and (max-width: 518px) {
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    gap: 50px;
+    .dino-cards {
+      width: 98%;
+      margin: 0;
+      padding: 10px;
+     
+      a{
+        gap: 50px;
+      }
+      h1{
+        font-size: 3rem;
+      }
+      p{
+        font-size: 1.8rem;
+      }
+      span{
+        font-size: 2rem;
+      }
+    }
   }
+}
+
+@media screen and (max-width: 488px) {
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    gap: 50px;
+    .dino-cards {
+      width: 98%;
+      margin: 0;
+      padding: 10px;
+     
+      a{
+        gap: 30px;
+      }
+      h1{
+        font-size: 3rem;
+      }
+      p{
+        font-size: 1.7rem;
+        line-height: 35px;
+      }
+      span{
+        font-size: 1.8rem;
+        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    gap: 50px;
+    .dino-cards {
+      width: 98%;
+      margin: 0;
+      padding: 10px;
+     
+      a{
+        gap: 20px;
+      }
+      h1{
+        font-size: 2.5rem;
+      }
+      p{
+        font-size: 1.5rem;
+        line-height: 25px;
+      }
+      span{
+        font-size: 1.8rem;
+        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    gap: 50px;
+    .dino-cards {
+      width: 98%;
+      margin: 0;
+      padding: 10px;
+     
+      a{
+        gap: 20px;
+      }
+      h1{
+        font-size: 2.3rem;
+      }
+      p{
+        font-size: 1.2rem;
+        line-height: 20px;
+      }
+      span{
+        font-size: 1.8rem;
+        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .filter {
+
+    .search_input {
+      width: 80%;
+      border-radius: 80px;
+      padding: 10px;
+      background-color: #272b33be;
+      border: 1px solid #faa759be;
+      color: white;
+    }
+  }
+
+
+  .container-cards {
+    gap: 5px;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    gap: 30px;
+    .dino-cards {
+      width: 98%;
+      margin: 0;
+      padding: 10px;
+     
+      a{
+        gap: 5px;
+      }
+      h1{
+        font-size: 1.8rem;
+      }
+      p{
+        font-size: 1.2rem;
+        line-height: 20px;
+      }
+      span{
+        font-size: 1.5rem;
+        
+      }
+    }
+  }
+}

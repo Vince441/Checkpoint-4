@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-undef */
 // Import access to database tables
-const tables = require("../tables");
 const jwt = require("jsonwebtoken");
+const tables = require("../tables");
 
 // The B of BREAD - Browse (Read All) operation
 const browse = async (req, res, next) => {
