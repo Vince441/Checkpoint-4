@@ -1,0 +1,79 @@
+.filter {
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .search_input {
+    width: 50%;
+    border-radius: 80px;
+    padding: 10px;
+    background-color: #272b33be;
+    border: 1px solid #faa759be;
+    color: white;
+  }
+}
+
+.container-cards {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    max-height: 85vh;
+    overflow-y: auto;
+    
+
+    .dino-cards {
+      margin: 0 auto;
+      width: 45%;
+      border-radius: 10px;
+      padding: 15px;
+      color: white;
+      border: 1px solid #faa759be;
+      background-color: #272b33be;
+      display: flex;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        cursor: pointer;
+      }
+      h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 30px;
+        letter-spacing: 0.1em;
+        color: #ea6d54;
+      }
+      p {
+        line-height: 40px;
+        font-size: 18px;
+        font-family: "Titillium Web", sans-serif;
+      }
+      span {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        color: #faa759;
+      }
+      .texte-cards {
+        padding: 15px;
+        color: white;
+      }
+      img {
+        width: 40%;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .container-cards::-webkit-scrollbar {
+    width: 8px; /* Largeur de la barre de défilement */
+  }
+  
+  .container-cards::-webkit-scrollbar-thumb {
+    background-color: #faa75988; /* Couleur de la poignée de la barre de défilement */
+    border-radius: 3px; /* Coins arrondis de la poignée */
+  }

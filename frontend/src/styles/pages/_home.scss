@@ -1,0 +1,131 @@
+.container-home {
+  height: 100vh;
+  display: flex;
+
+  .container-home__title {
+    width: 30vw;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    animation: 0.5s ease-in-out slideInFromLeft;
+    transition: all 1s ease-in-out;
+    .container-home__title__text {
+        width: 70%;
+        h1 {
+          font-size: 3rem;
+          padding: 10px;
+          font-family: var(--primary-font);
+          color: var(--primary-color);
+        }
+        p {
+          padding: 1rem;
+          font-size: 1.8rem;
+          font-family: var(--primary-font);
+          color: white;
+        }
+        p:first-letter {
+          font-size: 5rem;
+          font-family: var(--primary-font);
+          color: var(--primary-color);
+        }
+      }
+  }
+  
+
+  .page-inscription {
+    width: 70%;
+    height: 90%;
+display: flex;
+align-items: center;
+.Container{
+    
+    width: 100%;
+  form{
+    .Information {
+
+        margin: 0 14%;
+        width: 30%;
+        height: 500px;
+        padding: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid #ea6d54;
+        background-color: #272b33be;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        color: white;
+        h1 {
+            color: var(--secondary-color);
+            font-size: 5rem;
+            font-family: var(--secondary-font);
+          }
+          label {
+            color: white;
+            font-size: 2rem;
+           
+            font-family: var(--primary-font);
+          }
+      
+          .Information_pseudo_password{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            input {
+                height: 35px;
+                width: 80%;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                border: 1px solid #ea6d54;
+                background-color: #272b33e5;
+                font-family: var(--primary-font);
+                color: white;
+              }
+          }
+       
+        button {
+          border: none;
+          background-color: #272b33;
+          border: 1px solid #ea6d54;
+          width: 100%;
+          padding: 10px;
+          color: white;
+          font-family: var(--primary-font);
+          font-size: 2rem;
+          letter-spacing: 2px;
+          cursor: pointer;
+        }
+      }
+  }
+
+}
+
+
+ 
+
+  
+    }
+  }
+
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+  }

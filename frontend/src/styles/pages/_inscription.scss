@@ -1,0 +1,84 @@
+.container-inscription{
+    height: 100vh;
+    .page-inscription {
+        width: 100%;
+        height: 90%;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    .Container{
+        
+        width: 100%;
+      form{
+        .Information {
+    
+            margin: 0 auto;
+            width: 25%;
+            height: 500px;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #ea6d54;
+            background-color: #272b33be;
+            border-radius: 10px;
+            letter-spacing: 2px;
+            color: white;
+            h1 {
+                color: var(--secondary-color);
+                font-size: 5rem;
+                font-family: var(--secondary-font);
+              }
+              label {
+                color: white;
+                font-size: 2rem;
+               
+                font-family: var(--primary-font);
+              }
+          
+              .Information_pseudo_email_password{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+                input {
+                    height: 35%;
+                    width: 60%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    border: 1px solid #ea6d54;
+                    background-color: #272b33e5;
+                    font-family: var(--primary-font);
+                    color: white;
+                  }
+              }
+           
+            button {
+              border: none;
+              background-color: #272b33;
+              border: 1px solid #ea6d54;
+              width: 60%;
+              padding: 10px;
+              color: white;
+              font-family: var(--primary-font);
+              font-size: 2rem;
+              letter-spacing: 2px;
+              cursor: pointer;
+            }
+          }
+      }
+    
+    }
+}}
+
+
+
+
+ 
+
+  
+    
