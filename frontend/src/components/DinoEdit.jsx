@@ -21,7 +21,7 @@ export default function DinoEdit({ dino, onUpdate }) {
         }
       );
       onUpdate(dinoUpdated.data);
-      navigate("/PageDino");
+      navigate(`/PageDinoDetails/${dinoUpdated.data.id}`);
     } catch (error) {
       console.error("Error updating dinosaur:", error);
     }

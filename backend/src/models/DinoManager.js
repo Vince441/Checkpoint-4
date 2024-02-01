@@ -102,7 +102,8 @@ class dinoManager extends AbstractManager {
 
   async readByUserId(userId) {
     const [rows] = await this.database.query(
-      `SELECT  * FROM ${this.table} WHERE id=?,`[userId]
+      `SELECT * FROM ${this.table} WHERE utilisateur_id = ? `,
+      [userId]
     );
     return rows;
   }

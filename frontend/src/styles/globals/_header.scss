@@ -17,3 +17,46 @@ header {
     }
   }
   
+
+  @media screen and (max-width: 768px){
+    header {
+      width: 100%;
+      padding: 15px;
+display: flex;
+gap: 80px ;
+  
+      a {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 3rem;
+        font-family: "Bebas Neue", sans-serif;
+      }
+    
+      .active {
+        color: #ea6d54;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    header {
+      width: 100%;
+      padding: 15px;
+display: flex;
+justify-content: center;
+gap: 80px ;
+  
+      a {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 3rem;
+        font-family: "Bebas Neue", sans-serif;
+      }
+    
+      .active {
+        color: #ea6d54;
+      }
+    }
+  }

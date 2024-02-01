@@ -99,6 +99,55 @@ cursor: pointer;
   }
 }
 
+@media screen and (max-width: 1355px) {
+  .page-details {
+    .return-details {
+      .details-cards-container {
+        width: 100%;
+
+        .details-cards {
+          min-height: 500px;
+          border-radius: 0px 0px 0px 0px;
+          .texte-details {
+            .flex-texte {
+              padding: 0;
+              .titre-logo {
+                img {
+                  width: 15%;
+                }
+              }
+
+              h1 {
+                font-size: 35px;
+              }
+              p {
+                line-height: 35px;
+                font-size: 15px;
+              }
+              span {
+                font-size: 20px;
+              }
+            }
+          }
+
+          .Image-dino {
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+      .return-home {
+        width: 30%;
+        img {
+        }
+      }
+    }
+  }
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .page-details {
     .return-details {
@@ -139,16 +188,16 @@ cursor: pointer;
       }
       .return-home {
         img {
+          width: 30%;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 987px) {
   .page-details {
     .return-details {
-      flex-direction: column;
       .details-cards-container {
         width: 100%;
 
@@ -185,9 +234,60 @@ cursor: pointer;
         }
       }
       .return-home {
-        height: 15vh;
         img {
-          width: 10%;
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .page-details {
+    .return-details {
+      flex-direction: column;
+      
+      .details-cards-container {
+        width: 100%;
+        padding-bottom: 80px;
+        .details-cards {
+          min-height: 500px;
+          border-radius: 0px 0px 0px 0px;
+          
+          .texte-details {
+            .flex-texte {
+              padding: 0;
+              .titre-logo {
+                img {
+                  width: 15%;
+                }
+              }
+
+              h1 {
+                font-size: 35px;
+              }
+              p {
+                line-height: 35px;
+                font-size: 15px;
+              }
+              span {
+                font-size: 20px;
+              }
+            }
+          }
+
+          .Image-dino {
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+      .return-home {
+        height: 80vh;
+        img {
+          width: 100%;
         }
       }
     }
@@ -237,7 +337,7 @@ cursor: pointer;
       .return-home {
         height: 15vh;
         img {
-          width: 10%;
+          width: 30%;
         }
       }
     }
@@ -271,6 +371,12 @@ cursor: pointer;
               width: 100%;
             }
           }
+        }
+      }
+      .return-home {
+        height: 15vh;
+        img {
+          width: 50%;
         }
       }
     }
