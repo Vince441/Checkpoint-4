@@ -1,5 +1,8 @@
+const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 const tables = require("../tables");
+
+
 
 const login = async (req, res, next) => {
   try {
@@ -20,7 +23,17 @@ const login = async (req, res, next) => {
       // Respond with the user in JSON format (but without the hashed password)
       delete user[0].hashed_password;
 
-      res.status(200).json(user[0]);
+      const token = await jwt.sign(
+        { sub: user[0].id },
+        process.env.APP_SECRET,
+        {
+          expiresIn: "1h",
+        }
+      );
+      res.json({
+        token,
+        user: user[0],
+      });
     } else {
       res.sendStatus(422);
     }

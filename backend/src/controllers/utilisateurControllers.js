@@ -1,6 +1,8 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-undef */
 // Import access to database tables
 const tables = require("../tables");
+const jwt = require("jsonwebtoken");
 
 // The B of BREAD - Browse (Read All) operation
 const browse = async (req, res, next) => {
@@ -61,13 +63,38 @@ const edit = async (req, res, next) => {
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
   // Extract the user data from the request body
-  const user = req.body;
   try {
     // Insert the user into the database
-    const insertId = await tables.utilisateur.create(user);
+    const { pseudo, email, hashed_password } = req.body;
+    const result = await tables.utilisateur.create({
+      pseudo,
+      email,
+      hashed_password,
+    });
+    if (result) {
+      const newUser = {
+        id: result.insertId,
+        pseudo,
+        email,
+        hashed_password,
+      };
 
-    // Respond with HTTP 201 (Created) and the ID of the newly inserted user
-    res.status(201).json({ insertId });
+      const token = await jwt.sign(
+        { sub: newUser.id, admin: newUser.admin },
+        process.env.APP_SECRET,
+        {
+          expiresIn: "1h",
+        }
+      );
+
+      res.status(201).json({
+        token,
+        pseudo: newUser.pseudo,
+        email: newUser.email,
+      });
+    } else {
+      res.sendStatus(400);
+    }
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -90,6 +117,26 @@ const destroy = async (req, res, next) => {
   }
 };
 
+const getByToken = async (req, res) => {
+  const userInfo = req.auth;
+
+  try {
+    if (userInfo && userInfo.sub) {
+      const utilisateur = await tables.utilisateur.read(userInfo.sub);
+
+      if (utilisateur == null) {
+        res.sendStatus(404);
+      } else {
+        res.json(utilisateur);
+      }
+    } else {
+      res.status(404).send("User not found. Auth doesn't exist");
+    }
+  } catch (e) {
+    res.status(500).send(`Internal server error : ${e}`);
+  }
+};
+
 // Ready to export the controller functions
 module.exports = {
   browse,
@@ -97,4 +144,5 @@ module.exports = {
   edit,
   add,
   destroy,
+  getByToken,
 };
