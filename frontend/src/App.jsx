@@ -1,12 +1,23 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
+import { Outlet } from "react-router-dom";
+import { useState, useMemo } from "react";
+import Header from "./globals/Header";
+import UserContext from "./context/UserContext";
 
-import "./App.css";
+
 
 function App() {
+  const [userConnected, setUserConnected] = useState(null);
   return (
-    <div className="App">
-    </div>
+    <UserContext.Provider
+      value={useMemo(
+        () => ({ userConnected, setUserConnected }),
+        [userConnected, setUserConnected]
+      )}
+    >
+      <Header />
+      <Outlet />
+
+    </UserContext.Provider>
   );
 }
 

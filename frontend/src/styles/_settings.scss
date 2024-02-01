@@ -1,11 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-html, body,
+html,
+body,
 :root {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/fond.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-y: hidden;
+  --primary-color: #ea6d54;
+  --secondary-color: #faa759af;
+  font-size: 10px;
+  --primary-font: "Titillium Web", sans-serif;
+  --secondary-font: "Bebas Neue", sans-serif;;
+}
 
+a {
+  text-decoration: none;
+  color: white;
 }

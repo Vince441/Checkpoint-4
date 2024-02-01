@@ -1,1 +1,8 @@
-@import "settings"
+@import "settings";
+@import "./globals/header";
+@import "pages/home";
+@import "pages/inscription";
+@import "pages/profilUser";
+@import "pages/PageDino";
+@import "pages/PageDinoDetails";
+@import "components/DinoEdit";
