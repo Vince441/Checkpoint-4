@@ -8,6 +8,7 @@ import Inscription from "./pages/Inscription";
 import PageDino, { loadDino } from "./pages/PageDino";
 import PageDinoDetails, { loadDinoDetails } from "./pages/PageDinoDetails";
 import ProfilUser from "./pages/ProfilUser";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -24,17 +25,29 @@ const router = createBrowserRouter([
       },
       {
         path: "PageDino",
-        element: <PageDino />,
+        element: (
+          <ProtectedRoute>
+            <PageDino />
+          </ProtectedRoute>
+        ),
         loader: loadDino,
       },
       {
         path: "PageDinoDetails/:id",
-        element: <PageDinoDetails />,
+        element: (
+          <ProtectedRoute>
+            <PageDinoDetails />
+          </ProtectedRoute>
+        ),
         loader: loadDinoDetails,
       },
       {
         path: "ProfilUser",
-        element: <ProfilUser />,
+        element: (
+          <ProtectedRoute>
+            <ProfilUser />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

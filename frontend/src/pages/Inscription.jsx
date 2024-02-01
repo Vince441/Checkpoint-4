@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import UserContext from "../context/UserContext";
 
 export default function Inscription() {
-  const [password, setPassword] = useState("");
+  const [inputPassword, setinputPassword] = useState("");
   const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
+  const { setUserConnected } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -14,13 +16,30 @@ export default function Inscription() {
     const userSignup = {
       pseudo,
       email,
-      password: password,
+      password: inputPassword,
     };
-
+    const user = JSON.parse(localStorage.getItem("token"));
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/utilisateur`,
-        userSignup
+        userSignup,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
+
+      setUserConnected(res.data);
+      const userLocal = {
+        ...res.data,
+        token: res.data.token,
+      };
+      localStorage.setItem(
+        "token",
+        JSON.stringify({
+          ...userLocal,
+        })
       );
 
       if (res.status === 201) {
@@ -61,8 +80,8 @@ export default function Inscription() {
                   <input
                     type="password"
                     id="password"
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
+                    value={inputPassword}
+                    onChange={(event) => setinputPassword(event.target.value)}
                   />
                 </div>
                 <button type="submit">S'incrire</button>

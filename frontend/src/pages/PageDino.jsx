@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useLoaderData, Link } from "react-router-dom";
 import UserContext from "../context/UserContext";
@@ -71,9 +71,15 @@ export default function PageDino() {
 }
 
 export const loadDino = async () => {
+  const user = JSON.parse(localStorage.getItem("token"));
   try {
     const res = await axios.get(
-      `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures`
+      `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures`,
+      {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
     );
     return res.data;
   } catch (e) {

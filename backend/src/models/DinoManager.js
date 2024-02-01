@@ -99,6 +99,13 @@ class dinoManager extends AbstractManager {
     );
     return result;
   }
+
+  async readByUserId(userId) {
+    const [rows] = await this.database.query(
+      `SELECT  * FROM ${this.table} WHERE id=?,`[userId]
+    );
+    return rows;
+  }
 }
 
 module.exports = dinoManager;

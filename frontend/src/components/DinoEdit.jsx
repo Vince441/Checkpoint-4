@@ -9,11 +9,16 @@ export default function DinoEdit({ dino, onUpdate }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const user = JSON.parse(localStorage.getItem("token"));
     try {
       const dinoUpdated = await axios.put(
         `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures/${dinoUpdate.id}`,
-        dinoUpdate
+        dinoUpdate,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
       );
       onUpdate(dinoUpdated.data);
       navigate("/PageDino");
@@ -98,7 +103,7 @@ export default function DinoEdit({ dino, onUpdate }) {
                     })
                   }
                 />
-                
+
                 <span>Description : </span>
                 <textarea
                   type="text"
@@ -110,8 +115,9 @@ export default function DinoEdit({ dino, onUpdate }) {
                     })
                   }
                 />
-<div className="button-update">
-                <button type="submit">Update Dinosaure</button></div>
+                <div className="button-update">
+                  <button type="submit">Update Dinosaure</button>
+                </div>
               </div>
             </div>
           </div>

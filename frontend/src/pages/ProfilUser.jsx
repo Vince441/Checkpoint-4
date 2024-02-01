@@ -23,6 +23,7 @@ export default function ProfilUser() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const user = JSON.parse(localStorage.getItem("token"));
     try {
       const data = new FormData();
       data.append("name", nameDino);
@@ -36,7 +37,12 @@ export default function ProfilUser() {
       data.append("userId", userConnected.id);
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/dinoaures/adddino`,
-        data
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
       );
       setFile(res.data[0]);
       navigate("/PageDino");

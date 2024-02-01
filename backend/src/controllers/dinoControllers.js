@@ -112,6 +112,16 @@ const getUploadImage = async (req, res, next) => {
   }
 };
 
+const readByUserId = async (req, res, next) => {
+  try {
+    const dinosaures = await tables.dinosaures.readByUserId(req.params.id);
+    res.json(dinosaures);
+  } catch (err) {
+    next(err);
+  }
+};
+
+
 module.exports = {
   browse,
   read,
@@ -119,4 +129,5 @@ module.exports = {
   add,
   destroy,
   getUploadImage,
+  readByUserId,
 };

@@ -10,9 +10,15 @@ export default function Dinodetails() {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleDeleteDino = async (id) => {
+    const user = JSON.parse(localStorage.getItem("token"));
     try {
       await axios.delete(
-        `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures/${id}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
       );
       navigate("/PageDino");
     } catch (err) {
@@ -100,11 +106,16 @@ export default function Dinodetails() {
 }
 
 export const loadDinoDetails = async ({ params }) => {
+  const user = JSON.parse(localStorage.getItem("token"));
   try {
     const res = await axios.get(
-      `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures/${params.id}`
+      `${import.meta.env.VITE_BACKEND_URL}/api/dinosaures/${params.id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
     );
-    console.log(res.data);
     return res.data;
   } catch (e) {
     console.error("No Dino");
