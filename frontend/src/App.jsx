@@ -1,41 +1,31 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
+import { Outlet } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import Header from "./globals/Header";
+import UserContext from "./context/UserContext";
 
-import "./App.css";
+
 
 function App() {
+  const [userConnected, setUserConnected] = useState(null);
+
+  useEffect(() => {
+    const user = localStorage.getItem("token");
+    if (user) {
+      setUserConnected(JSON.parse(user));
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
+    <UserContext.Provider
+      value={useMemo(
+        () => ({ userConnected, setUserConnected }),
+        [userConnected, setUserConnected]
+      )}
+    >
+      <Header />
+      <Outlet />
 
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    </UserContext.Provider>
   );
 }
 

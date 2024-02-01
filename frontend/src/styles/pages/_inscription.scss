@@ -1,0 +1,247 @@
+.container-inscription{
+    height: 100vh;
+    .page-inscription {
+        width: 100%;
+        height: 90%;
+    display: flex;
+    align-items: center;
+    .Container{
+        
+        width: 100%;
+      form{
+        .Information {
+    
+            margin: 0 auto;
+            width: 25%;
+            height: 500px;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #ea6d54;
+            background-color: #272b33be;
+            border-radius: 10px;
+            letter-spacing: 2px;
+            color: white;
+            h1 {
+                color: var(--secondary-color);
+                font-size: 5rem;
+                font-family: var(--secondary-font);
+              }
+              label {
+                color: white;
+                font-size: 2rem;
+               
+                font-family: var(--primary-font);
+              }
+          
+              .Information_pseudo_email_password{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+                input {
+                    height: 35%;
+                    width: 60%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    border: 1px solid #ea6d54;
+                    background-color: #272b33e5;
+                    font-family: var(--primary-font);
+                    color: white;
+                  }
+              }
+           
+            button {
+              border: none;
+              background-color: #272b33;
+              border: 1px solid #ea6d54;
+              width: 60%;
+              padding: 10px;
+              color: white;
+              font-family: var(--primary-font);
+              font-size: 2rem;
+              letter-spacing: 2px;
+              cursor: pointer;
+            }
+          }
+      }
+    
+    }
+}}
+
+
+@media screen and (max-width: 1503px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 30%;
+                }
+            }
+        }
+    }
+  
+}}
+
+
+@media screen and (max-width: 1213px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 35%;
+                }
+            }
+        }
+    }
+  
+}}
+
+
+@media screen and (max-width: 1017px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 40%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 877px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 45%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 769px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 50%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 685px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 60%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 563px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 70%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 478px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                    width: 80%;
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 419px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                  justify-content: center;
+                    width: 80%;
+                    height: 450px;
+                    label{
+                      font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 381px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                  justify-content: center;
+                    width: 90%;
+                    height: 450px;
+                    label{
+                      font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}}
+
+@media screen and (max-width: 320px) {
+  .container-inscription{
+    .page-inscription {
+        .Container{
+            form{
+                .Information {
+                  justify-content: center;
+                    width: 90%;
+                    height: 450px;
+                    label{
+                      font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+  
+}}
