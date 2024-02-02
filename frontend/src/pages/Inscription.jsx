@@ -37,7 +37,7 @@ export default function Inscription() {
       );
 
       if (res.status === 201) {
-        navigate("/");
+        navigate("/PageDino");
       } else {
         console.info(res);
       }
