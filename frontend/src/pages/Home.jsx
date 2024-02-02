@@ -20,8 +20,7 @@ function Home() {
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/login`,
-        userLogin,
-
+        userLogin
       );
       setUserConnected(res.data);
       const userLocal = {
