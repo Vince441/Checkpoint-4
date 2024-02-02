@@ -73,14 +73,14 @@ const add = async (req, res, next) => {
     });
     if (result) {
       const newUser = {
-        id: result.insertId,
+        id: result,
         pseudo,
         email,
         hashed_password,
       };
 
       const token = await jwt.sign(
-        { sub: newUser.id, admin: newUser.admin },
+        { sub: newUser.id },
         process.env.APP_SECRET,
         {
           expiresIn: "1h",

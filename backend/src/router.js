@@ -17,6 +17,8 @@ const authControllers = require("./controllers/authControllers");
 
 // Route to get a list of items
 router.post("/login", authControllers.login);
+router.post("/utilisateur", hashPassword, utilisateurControllers.add);
+
 // Route to get a specific item by ID
 router.use(verifyToken);
 router.get("/dinosaures", dinoControllers.browse);
@@ -24,7 +26,6 @@ router.get("/utilisateur", utilisateurControllers.browse);
 router.get("/utilisateur/:id", utilisateurControllers.read);
 router.get("/dinosaures/:id", dinoControllers.read);
 
-router.post("/utilisateur", hashPassword, utilisateurControllers.add);
 router.get("/dinosaures/dinobyuser/:id", dinoControllers.readByUserId);
 // Route to add a new item
 router.post("/dinosaures", dinoControllers.add);

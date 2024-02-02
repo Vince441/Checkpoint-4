@@ -18,16 +18,10 @@ export default function Inscription() {
       email,
       password: inputPassword,
     };
-    const user = JSON.parse(localStorage.getItem("token"));
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/utilisateur`,
-        userSignup,
-        {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        }
+        userSignup
       );
 
       setUserConnected(res.data);
