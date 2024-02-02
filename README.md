@@ -27,3 +27,4 @@ responsive
 
 
 
+la modélisation de la bdd est dans le dossier ressource du Frontend
