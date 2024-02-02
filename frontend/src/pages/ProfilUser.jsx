@@ -84,10 +84,6 @@ export default function ProfilUser() {
 
                   <p>{userConnected.email}</p>
                 </div>
-                <div className="Flex__info">
-                  <h2>Description</h2>
-                  <p>{userConnected.description}</p>
-                </div>
               </div>
             </div>
           </div>
