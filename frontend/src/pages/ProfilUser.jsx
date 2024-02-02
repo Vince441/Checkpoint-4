@@ -66,6 +66,8 @@ export default function ProfilUser() {
         <div className="ProfilUser">
           <div className="ProfilUser__header_1">
             <div className="ProfilUser__header">
+              <div className="ProfilUser__header__img">
+              <img src="Logo-BlancJb.png" alt="logo"/></div>
               <h1>Profil</h1>
               <button
                 className="btn-deconnexion"

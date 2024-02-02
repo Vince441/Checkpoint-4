@@ -19,6 +19,17 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap: 10px;
+      .ProfilUser__header__img {
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 50%;
+
+        }
+      }
+ 
       h1 {
         color: var(--secondary-color);
         font-size: 5rem;
@@ -248,10 +259,12 @@
     .ProfilUser__header_1 {
       width: 100%;
       height: 25vh;
-      ;
+      
       .ProfilUser__header {
         align-items: center;
         gap : 10px;
+        .ProfilUser__header__img {
+          display: none;}
         h1 {
           font-size: 5rem;
         }
