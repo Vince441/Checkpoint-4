@@ -115,9 +115,7 @@ const getUploadImage = async (req, res, next) => {
 const readByUserId = async (req, res, next) => {
   try {
     const result = await tables.dinosaures.readByUserId(req.params.id);
-    if (result.length > 0) {
-      res.status(200).send(result);
-    }
+    res.status(200).send(result);
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
